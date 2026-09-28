@@ -1,0 +1,21 @@
+services:
+  web:
+    image: nginx:alpine
+    container_name: remote-lab-web
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+
+  database:
+    image: postgres:16-alpine
+    container_name: remote-lab-db
+    environment:
+      POSTGRES_DB: infrastructure_lab
+      POSTGRES_USER: labuser
+      POSTGRES_PASSWORD: labpassword
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  postgres_data:

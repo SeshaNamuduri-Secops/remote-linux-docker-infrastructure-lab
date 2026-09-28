@@ -1,0 +1,32 @@
+# Secrets and credentials
+.env
+.env.*
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+id_rsa
+id_rsa.pub
+authorized_keys
+
+# SSH / local configuration
+.ssh/
+known_hosts
+
+# OS / editor files
+.DS_Store
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Local Docker data
+docker/data/
+docker/volumes/
+
+# Local project files
+*.local
